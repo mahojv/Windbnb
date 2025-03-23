@@ -1,1 +1,20 @@
 @import "tailwindcss";
+
+@theme {
+
+    --color-rojoclaro: #eb5757;
+    --color-rojomasclaro: #ec6767;
+    --color-grisTexto: #9ca3af;
+    --color-grisRanking: #515661;
+    --color-grisToggleMenu: #f9fafb;
+    --color-blancoBtn: #ffffff;
+
+
+
+
+
+}
+
+.hoverInput:hover::placeholder {
+    color: black;
+  }
