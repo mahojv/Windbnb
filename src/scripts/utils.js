@@ -58,3 +58,32 @@ array.forEach(item => {
 
 
 }
+
+
+export function sumador (counter, op, tag){
+    const idIndividual = tag.id
+    if (op === "-" && counter > 0){
+        counter-= 1 
+
+
+   }else if (op === "+"){
+
+         counter+= 1
+    }
+    const template = `
+        <p id="${idIndividual}" >${counter}</p>
+        `
+    tag.innerHTML= template
+
+    return counter
+}
+
+export function totalCounterGuest(cA, cB, tag){
+
+    const cT = cA + cB
+
+    tag.innerHTML= `<p class="text-center" id="guestInputSearch">${cT}</p>`
+    return cT
+
+
+}
