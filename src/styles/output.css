@@ -223,6 +223,9 @@
   .hidden {
     display: none;
   }
+  .table {
+    display: table;
+  }
   .aspect-video {
     aspect-ratio: var(--aspect-video);
   }
@@ -312,6 +315,12 @@
   }
   .flex-grow {
     flex-grow: 1;
+  }
+  .border-collapse {
+    border-collapse: collapse;
+  }
+  .resize {
+    resize: both;
   }
   .flex-col {
     flex-direction: column;
@@ -458,9 +467,16 @@
   .text-rojoclaro {
     color: var(--color-rojoclaro);
   }
+  .underline {
+    text-decoration-line: underline;
+  }
   .shadow-lg {
     --tw-shadow: 0 10px 15px -3px var(--tw-shadow-color, rgb(0 0 0 / 0.1)), 0 4px 6px -4px var(--tw-shadow-color, rgb(0 0 0 / 0.1));
     box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+  }
+  .outline {
+    outline-style: var(--tw-outline-style);
+    outline-width: 1px;
   }
   .placeholder\:text-black {
     &::placeholder {
@@ -512,14 +528,34 @@
       width: 255px;
     }
   }
+  .sm\:w-\[640px\] {
+    @media (width >= 40rem) {
+      width: 640px;
+    }
+  }
   .sm\:max-w-\[283px\] {
     @media (width >= 40rem) {
       max-width: 283px;
     }
   }
+  .sm\:max-w-\[580px\] {
+    @media (width >= 40rem) {
+      max-width: 580px;
+    }
+  }
   .sm\:max-w-\[640px\] {
     @media (width >= 40rem) {
       max-width: 640px;
+    }
+  }
+  .sm\:max-w-\[5800px\] {
+    @media (width >= 40rem) {
+      max-width: 5800px;
+    }
+  }
+  .sm\:min-w-\[580px\] {
+    @media (width >= 40rem) {
+      min-width: 580px;
     }
   }
   .sm\:grid-cols-2 {
@@ -583,6 +619,16 @@
       width: 560px;
     }
   }
+  .md\:w-\[1024px\] {
+    @media (width >= 48rem) {
+      width: 1024px;
+    }
+  }
+  .md\:w-\[1280px\] {
+    @media (width >= 48rem) {
+      width: 1280px;
+    }
+  }
   .md\:max-w-\[380px\] {
     @media (width >= 48rem) {
       max-width: 380px;
@@ -593,9 +639,70 @@
       max-width: 1280px;
     }
   }
+  .md\:min-w-\[764px\] {
+    @media (width >= 48rem) {
+      min-width: 764px;
+    }
+  }
+  .md\:min-w-\[1280px\] {
+    @media (width >= 48rem) {
+      min-width: 1280px;
+    }
+  }
   .md\:grid-cols-3 {
     @media (width >= 48rem) {
       grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+  }
+  .lg\:min-w-\[1000px\] {
+    @media (width >= 64rem) {
+      min-width: 1000px;
+    }
+  }
+  .lg\:min-w-\[1000x\] {
+    @media (width >= 64rem) {
+      min-width: 1000x;
+    }
+  }
+  .lg\:min-w-\[1024px\] {
+    @media (width >= 64rem) {
+      min-width: 1024px;
+    }
+  }
+  .lg\:min-w-\[10200px\] {
+    @media (width >= 64rem) {
+      min-width: 10200px;
+    }
+  }
+  .lg\:md\:min-w-\[764px\] {
+    @media (width >= 64rem) {
+      @media (width >= 48rem) {
+        min-width: 764px;
+      }
+    }
+  }
+  .lg\:md\:min-w-\[1024px\] {
+    @media (width >= 64rem) {
+      @media (width >= 48rem) {
+        min-width: 1024px;
+      }
+    }
+  }
+  .xl\:min-w-\[1024px\] {
+    @media (width >= 80rem) {
+      min-width: 1024px;
+    }
+  }
+  .xl\:min-w-\[1280px\] {
+    @media (width >= 80rem) {
+      min-width: 1280px;
+    }
+  }
+  .xl\:md\:min-w-\[1024px\] {
+    @media (width >= 80rem) {
+      @media (width >= 48rem) {
+        min-width: 1024px;
+      }
     }
   }
 }
@@ -665,4 +772,9 @@
   syntax: "*";
   inherits: false;
   initial-value: 0 0 #0000;
+}
+@property --tw-outline-style {
+  syntax: "*";
+  inherits: false;
+  initial-value: solid;
 }

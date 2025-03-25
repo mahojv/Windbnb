@@ -31,6 +31,8 @@
         
     </header>
 
+    <!-- usar focus-whithin en los div del input -->
+
     <section role="toggleSearch" id="toggleSearch" class=" hidden bg-grisToggleMenu  absolute z-50 top-0 w-full   h-[420px]  left-0   ">
         <div class="flex flex-col p-3">
         <div class="flex justify-between ">
@@ -46,8 +48,8 @@
             <label  id="guestLabelSearch" class="font-bold">Guest</label>
             <p  id="guestInputSearch" class="text-center">0</p>
         </div>
-        <span class="hidden sm:block">
-            <button type="submit" class=" rounded-r-2xl border w-[131px] h-[61px] text-blancoBtn bg-rojomasclaro sm:flex gap-1 justify-center items-center font-bold sm:w-[130px] md:w-[160px]"> 
+        <span class="hidden sm:block" >
+            <button id="searchStay" type="submit"  class="  rounded-r-2xl border w-[131px] h-[61px] text-blancoBtn bg-rojomasclaro sm:flex gap-1 justify-center items-center font-bold sm:w-[130px] md:w-[160px] "> 
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="4" stroke="currentColor" class="size-5 font-bold ">
                 <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
                 </svg> 
@@ -110,7 +112,7 @@
 </div>
 
 
-        <button type="submit" class=" mx-auto mt-3 rounded-xl border w-[125px] h-[38px] text-blancoBtn bg-rojomasclaro flex sm:hidden gap-1 justify-center items-center font-bold"> 
+        <button type="submit" id="searchStay2" class="searchStay mx-auto mt-3 rounded-xl border w-[125px] h-[38px] text-blancoBtn bg-rojomasclaro flex sm:hidden gap-1 justify-center items-center font-bold"> 
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="4" stroke="currentColor" class="size-5 font-bold ">
               <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
             </svg> 
@@ -121,10 +123,10 @@
     </section>
 
 
-    <main class="px-[15px] mt-[20px]  flex-grow sm:mt-20 ">
-        <div class="flex justify-between items-center">
+    <main class="px-[15px] mt-[20px] w-full  flex-grow sm:mt-20 ">
+        <div class="sm:min-w-[580px] md:min-w-[764px] lg:min-w-[1000px] xl:min-w-[1280px] flex justify-between items-center">
             <h1 class="text-2xl font-bold">Stays in finland</h1>
-            <p class="font-semibold">12+ stays</p>
+            <p id="itemsCardCounter" class="font-semibold">12+ stays</p>
 
         </div>
 

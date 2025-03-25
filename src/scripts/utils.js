@@ -1,9 +1,31 @@
 
 
 
-export function loadStays (array, box){
+export function loadStays (array, box, itemsBox){
     
 box.innerHTML = ""
+itemsBox.innerHTML = ""
+
+let items = array.length
+let itemsTemplate = ""
+
+if(items > 12){
+
+     itemsTemplate = `<p id="itemsCardCounter" class="font-semibold">12+ stays</p>`
+
+}else if(items > 1 || items === 0){
+    
+    itemsTemplate = `<p id="itemsCardCounter" class="font-semibold">${items} stays</p>`
+
+}else{
+
+    itemsTemplate = `<p id="itemsCardCounter" class="font-semibold">${items} stay</p>`
+
+
+}
+
+
+
 array.forEach(item => {
 
     let superHostItem = ""
@@ -53,6 +75,7 @@ array.forEach(item => {
             </div> `
 
          box.innerHTML += template
+         itemsBox.innerHTML = itemsTemplate
 
 });
 
@@ -83,7 +106,41 @@ export function totalCounterGuest(cA, cB, tag){
     const cT = cA + cB
 
     tag.innerHTML= `<p class="text-center" id="guestInputSearch">${cT}</p>`
+    
     return cT
 
 
+}
+
+export function filterSearch(contentInputSearch, guestSearch , arrayStay) {
+
+    let arrayFiltered = arrayStay.filter(function (search){
+
+
+        if(contentInputSearch.toLowerCase().includes(search.city.toLowerCase()) && search.maxGuests >= guestSearch ){
+
+            return search
+            
+
+        }
+
+
+
+        
+
+        
+
+    
+
+    }
+    
+
+)
+
+
+return arrayFiltered
+        
+
+
+    
 }
