@@ -6,6 +6,8 @@
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
+    --color-amber-300: oklch(0.879 0.169 91.605);
+    --color-violet-500: oklch(0.606 0.25 292.717);
     --color-gray-100: oklch(0.967 0.003 264.542);
     --color-gray-300: oklch(0.872 0.01 258.338);
     --color-black: #000;
@@ -396,6 +398,9 @@
   .border-gray-300 {
     border-color: var(--color-gray-300);
   }
+  .bg-amber-300 {
+    background-color: var(--color-amber-300);
+  }
   .bg-grisToggleMenu {
     background-color: var(--color-grisToggleMenu);
   }
@@ -452,6 +457,9 @@
     --tw-font-weight: var(--font-weight-semibold);
     font-weight: var(--font-weight-semibold);
   }
+  .text-black {
+    color: var(--color-black);
+  }
   .text-blancoBtn {
     color: var(--color-blancoBtn);
   }
@@ -478,9 +486,37 @@
     outline-style: var(--tw-outline-style);
     outline-width: 1px;
   }
+  .\*\*\:flex {
+    :is(& *) {
+      display: flex;
+    }
+  }
   .placeholder\:text-black {
     &::placeholder {
       color: var(--color-black);
+    }
+  }
+  .hover\:text-black {
+    &:hover {
+      @media (hover: hover) {
+        color: var(--color-black);
+      }
+    }
+  }
+  .focus\:outline-2 {
+    &:focus {
+      outline-style: var(--tw-outline-style);
+      outline-width: 2px;
+    }
+  }
+  .focus\:outline-offset-2 {
+    &:focus {
+      outline-offset: 2px;
+    }
+  }
+  .focus\:outline-violet-500 {
+    &:focus {
+      outline-color: var(--color-violet-500);
     }
   }
   .sm\:mx-0 {
@@ -589,6 +625,11 @@
       padding-inline: 30px;
     }
   }
+  .md\:mr-\[0px\] {
+    @media (width >= 48rem) {
+      margin-right: 0px;
+    }
+  }
   .md\:mr-\[00px\] {
     @media (width >= 48rem) {
       margin-right: 00px;
@@ -627,6 +668,11 @@
   .lg\:min-w-\[1000px\] {
     @media (width >= 64rem) {
       min-width: 1000px;
+    }
+  }
+  .xl\:min-w-\[1024px\] {
+    @media (width >= 80rem) {
+      min-width: 1024px;
     }
   }
   .xl\:min-w-\[1280px\] {

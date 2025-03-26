@@ -125,7 +125,7 @@ export function filterSearch(contentInputSearch, guestSearch , arrayStay) {
 
 
         }else {
-            if(contentInputSearch.toLowerCase().includes(search.city.toLowerCase()) && search.maxGuests >= guestSearch ){
+            if(contentInputSearch[0].toLowerCase().includes(search.city.toLowerCase()) && search.maxGuests >= guestSearch ){
 
                 return search
                 
@@ -155,3 +155,71 @@ return arrayFiltered
 
     
 }
+
+export function listaPrincipal(array){
+
+    let nuevoArray = array.map(function(x){
+
+        let arrayRecorte = Object.values(x).slice(0,2)
+
+        return arrayRecorte
+
+
+    })
+
+    return nuevoArray
+
+}
+
+export function suggestionDeploy (array, suggestionBox){
+
+const reduccion = array.reduce(function (acum, item){
+
+
+    const [ciudad, pais] = item
+
+
+    let existe = acum.some(function (x) {
+        const ciudadAcum = x[0]
+        const paisAcum = x[1]
+
+
+        return ciudadAcum === ciudad && paisAcum === pais
+    });
+
+    if (!existe) {
+        acum.push(item)
+    }
+
+    return acum
+}, [])
+
+// return reduccion
+
+suggestionBox.innerHTML= ``
+
+reduccion.forEach(function(x){
+
+    const template = `    
+    <span class="flex gap-1.5 items-center ">
+                    <img class="size-5 " src="./src/images/icons/pin.svg" alt="">
+                    <p class="text-grisRanking">${x[0]}, ${x[1]}</p>
+                </span>
+                `
+
+    
+    
+
+
+    suggestionBox.innerHTML += template
+})
+
+
+
+
+
+
+
+
+}
+

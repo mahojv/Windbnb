@@ -5,7 +5,7 @@
  */
 
 import { stays } from "./stays.js";
-import { loadStays, sumador, totalCounterGuest, filterSearch } from "./utils.js";
+import { loadStays, sumador, totalCounterGuest, filterSearch, listaPrincipal, suggestionDeploy } from "./utils.js";
 
 // botones
 const searchBarBtns = document.querySelectorAll("#searchBarBtns");
@@ -30,13 +30,21 @@ const locationInputSearch = document.querySelector("#locationInputSearch")
 const placeSugestions = document.querySelector("#placeSugestions")
 const guestCounter = document.querySelector("#guestCounter")
 const itemsCardCounter = document.querySelector("#itemsCardCounter")
+const sugerenciasBox = document.querySelector("#sugerenciasBox")
 
 // Variables Globales
 let contadorA = 0
 let contadorC = 0
 let contadorTotal = 0
-let contentInputSearch = ""
+let contentInputSearch = "Whole, Finland"
 let contentGuestSearch = ""
+let reduccionSugerencias = []
+let principalArray = []
+let arrayInput = ""
+let nuevaLista = ""
+
+locationSearch.textContent = contentInputSearch
+guestSearch.textContent = `Add Guest`
 
 
 
@@ -68,6 +76,9 @@ searchBarBtns.forEach(function (event) {
 
 
             // locationValue = codigo.value
+
+            principalArray = listaPrincipal(stays)
+            suggestionDeploy(principalArray, sugerenciasBox)
             
 
 
@@ -128,20 +139,51 @@ locationInputSearch.addEventListener('input', function(event){
 
     contentInputSearch = event.target.value
 
+        principalArray = listaPrincipal(stays)
+            suggestionDeploy(principalArray, sugerenciasBox)
+
+             arrayInput = contentInputSearch.split(", ")
     
+
+
+    console.log(arrayInput)
+    nuevaLista = filterSearch(arrayInput,contadorTotal, stays)
+
+
     
-    // console.log(contentInputSearch)
-    
-    let nuevaLista = filterSearch(contentInputSearch,contadorTotal, stays)
-    console.log(nuevaLista)
+
 
     if(nuevaLista.length > 0){
 
+        if(arrayInput.length = 1 ){
+
         loadStays(nuevaLista, cardsContainer, itemsCardCounter);
+        locationSearch.textContent = `${contentInputSearch}, Finland` 
+        guestSearch.textContent = `${contadorTotal} guests`
+
+
+        }else{
+
+            loadStays(nuevaLista, cardsContainer, itemsCardCounter);
+            locationSearch.textContent = `${contentInputSearch}` 
+            guestSearch.textContent = `${contadorTotal} guests`
+    
+    
+            }
+
+        
+
+        
+
     }
 
     
+
+    
 })
+
+
+
 
 guestInputSearch.addEventListener('input', function(event){
 
@@ -149,12 +191,17 @@ guestInputSearch.addEventListener('input', function(event){
     console.log(contentGuestSearch)
     
 
-    let nuevaLista = filterSearch(contentInputSearch,contadorTotal, stays)
+    nuevaLista = filterSearch(arrayInput, contadorTotal, stays)
     console.log(nuevaLista)
 
     if(nuevaLista.length > 0){
 
         loadStays(nuevaLista, cardsContainer, itemsCardCounter);
+
+      
+
+            locationSearch.textContent = contentInputSearch
+            guestSearch.textContent = `${contadorTotal} guests`
     }
 
 
@@ -166,8 +213,8 @@ searchStay.addEventListener('click', function (x){
 
     
 
-    let nuevaLista = filterSearch(contentInputSearch,contadorTotal, stays)
-    console.log(nuevaLista)
+    nuevaLista = filterSearch(arrayInput ,contadorTotal, stays)
+
 
     if(nuevaLista.length > 0){
 
@@ -180,9 +227,19 @@ searchStay.addEventListener('click', function (x){
 
 
     toggleSearch.classList.add("hidden");
+    
 
-    locationSearch.value = contentInputSearch
-    guestSearch.value = `${contadorTotal} guests`
+    if(arrayInput.length = 1 ){
+
+        locationSearch.textContent = `${contentInputSearch}, Finland` 
+        guestSearch.textContent = `${contadorTotal} guests`
+
+
+        }else{
+
+            locationSearch.textContent = `${contentInputSearch}` 
+            guestSearch.textContent = `${contadorTotal} guests`
+            }
 
 
 
@@ -193,7 +250,7 @@ searchStay2.addEventListener('click', function (x){
    
     
 
-    let nuevaLista = filterSearch(contentInputSearch,contadorTotal, stays)
+    nuevaLista = filterSearch(arrayInput ,contadorTotal, stays)
     console.log(nuevaLista)
 
     if(nuevaLista.length > 0){
@@ -208,8 +265,17 @@ searchStay2.addEventListener('click', function (x){
 
     toggleSearch.classList.add("hidden");
 
-    locationSearch.value = contentInputSearch
-    guestSearch.value = `${contadorTotal} guests`
+    if(arrayInput.length = 1 ){
+
+        locationSearch.textContent = `${contentInputSearch}, Finland` 
+        guestSearch.textContent = `${contadorTotal} guests`
+
+
+        }else{
+
+            locationSearch.textContent = `${contentInputSearch}` 
+            guestSearch.textContent = `${contadorTotal} guests`
+            }
 
 
 

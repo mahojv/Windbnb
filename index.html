@@ -16,12 +16,11 @@
             <img class="w-full" src="./src/images/icons/logo.svg" alt="">
         </figure>
         <div role="buscador" 
-            class=" h-[50px] w-[309px] flex  bg-white mx-auto shadow-lg overflow-hidden rounded-2xl md:mr-[00px] ">
-            <input id="locationSearch" type="text"
-                class="border border-gray-100 h-full w-[138px] rounded-l-2xl text-center placeholder:text-black"
-                placeholder="Whole, Finland">
-            <input id="guestSearch" type="text" name="" id="" class="border border-gray-100 h-full w-[113px] text-center hoverInput"
-                placeholder="Add guests">
+            class=" h-[50px] w-[309px] flex   bg-white mx-auto shadow-lg overflow-hidden rounded-2xl md:mr-[0px] ">
+            <p id="locationSearch" 
+                class="border border-gray-100 h-full w-[138px] rounded-l-2xl text-center text-black flex justify-center items-center"
+                placeholder="Whole, Finland">Whole, Finland</p>
+            <p id="guestSearch" class="border border-gray-100 h-full w-[113px] text-grisTexto hover:text-black flex items-center justify-center " >Add guests</p>
             <button id="searchBtn" class="border h-full w-[58px] rounded-r-2xl border-gray-100 flex justify-center items-center">
                 <img class="size-5  " src="./src/images/icons/search.svg" alt="">
 
@@ -33,14 +32,14 @@
 
     <!-- usar focus-whithin en los div del input -->
 
-    <section role="toggleSearch" id="toggleSearch" class=" hidden bg-grisToggleMenu  absolute z-50 top-0 w-full   h-[420px]  left-0   ">
+    <section role="toggleSearch" id="toggleSearch" class=" hidden  bg-grisToggleMenu  absolute z-50 top-0 w-full   h-[420px]  left-0   ">
         <div class="flex flex-col p-3">
         <div class="flex justify-between ">
             <p class="text-sm font-bold"> Edit your search</p>
             <button role="closeTogleBtn" id="closeTogleBtn" class="text-2xl mr-5 "><img class="size-3" src="./src/images/icons/cerrar.png" alt=""></button>
         </div>
         <div role="searchBar" id="searchBarBtns" class=" flex flex-col  p-0  justify-center mt-3 sm:flex-row  ">
-        <div  class=" flex flex-col justify-center text-center border border-gray-100 rounded-t-2xl sm:rounded-tr-none sm:rounded-l-2xl overflow-hidden sm:w-[255px] md:w-[560px] bg-white" >
+        <div  class=" flex flex-col justify-center text-center border border-gray-100 rounded-t-2xl sm:rounded-tr-none sm:rounded-l-2xl overflow-hidden sm:w-[255px] md:w-[560px] bg-white " >
             <label id="locationLabelSearch" class="font-bold ">Location</label>
             <input id="locationInputSearch" class=" text-center " type="text" placeholder="Helsinki, Finland">
         </div> 
@@ -59,28 +58,15 @@
         
         </div>
         <div role="sugerenciasBox" class=" flex flex-grow h-[205px] justify-center items-center">
-        <span id="placeSugestions" role="sugerencias de lugares" class="hidden">
-            <div  class="flex flex-col  gap-5 mt-[40px] mx-[30px]">
+        <span  id="placeSugestions" class="hidden">
+            <div id="sugerenciasBox"  class="flex flex-col  gap-5 mt-[40px] mx-[30px]">
 
                 <span class="flex gap-1.5 items-center ">
                     <img class="size-5 " src="./src/images/icons/pin.svg" alt="">
                     <p class="text-grisRanking">Helsinki, Finland</p>
                 </span>
 
-                <span class="flex gap-1.5 items-center ">
-                    <img class="size-5 " src="./src/images/icons/pin.svg" alt="">
-                    <p class="text-grisRanking">Helsinki, Finland</p>
-                </span>
 
-                <span class="flex gap-1.5 items-center ">
-                    <img class="size-5 " src="./src/images/icons/pin.svg" alt="">
-                    <p class="text-grisRanking">Helsinki, Finland</p>
-                </span>
-
-                <span class="flex gap-1.5 items-center ">
-                    <img class="size-5 " src="./src/images/icons/pin.svg" alt="">
-                    <p class="text-grisRanking">Helsinki, Finland</p>
-                </span>
 
 
             </div>
@@ -124,7 +110,7 @@
 
 
     <main class="px-[15px] mt-[20px] w-full  flex-grow sm:mt-20 ">
-        <div class="sm:min-w-[580px] md:min-w-[764px] lg:min-w-[1000px] xl:min-w-[1280px] flex justify-between items-center">
+        <div class="sm:min-w-[580px] md:min-w-[764px] lg:min-w-[1000px] xl:min-w-[1024px] flex justify-between items-center">
             <h1 class="text-2xl font-bold">Stays in finland</h1>
             <p id="itemsCardCounter" class="font-semibold">12+ stays</p>
 
