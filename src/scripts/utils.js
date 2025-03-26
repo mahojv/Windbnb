@@ -116,13 +116,24 @@ export function filterSearch(contentInputSearch, guestSearch , arrayStay) {
 
     let arrayFiltered = arrayStay.filter(function (search){
 
+        if(contentInputSearch === ""){
 
-        if(contentInputSearch.toLowerCase().includes(search.city.toLowerCase()) && search.maxGuests >= guestSearch ){
+            if(search.maxGuests >= guestSearch){
 
-            return search
-            
+                return search
+            }
+
+
+        }else {
+            if(contentInputSearch.toLowerCase().includes(search.city.toLowerCase()) && search.maxGuests >= guestSearch ){
+
+                return search
+                
+    
+            }
 
         }
+        
 
 
 

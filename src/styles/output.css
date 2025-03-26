@@ -528,29 +528,14 @@
       width: 255px;
     }
   }
-  .sm\:w-\[640px\] {
-    @media (width >= 40rem) {
-      width: 640px;
-    }
-  }
   .sm\:max-w-\[283px\] {
     @media (width >= 40rem) {
       max-width: 283px;
     }
   }
-  .sm\:max-w-\[580px\] {
-    @media (width >= 40rem) {
-      max-width: 580px;
-    }
-  }
   .sm\:max-w-\[640px\] {
     @media (width >= 40rem) {
       max-width: 640px;
-    }
-  }
-  .sm\:max-w-\[5800px\] {
-    @media (width >= 40rem) {
-      max-width: 5800px;
     }
   }
   .sm\:min-w-\[580px\] {
@@ -619,16 +604,6 @@
       width: 560px;
     }
   }
-  .md\:w-\[1024px\] {
-    @media (width >= 48rem) {
-      width: 1024px;
-    }
-  }
-  .md\:w-\[1280px\] {
-    @media (width >= 48rem) {
-      width: 1280px;
-    }
-  }
   .md\:max-w-\[380px\] {
     @media (width >= 48rem) {
       max-width: 380px;
@@ -644,11 +619,6 @@
       min-width: 764px;
     }
   }
-  .md\:min-w-\[1280px\] {
-    @media (width >= 48rem) {
-      min-width: 1280px;
-    }
-  }
   .md\:grid-cols-3 {
     @media (width >= 48rem) {
       grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -659,50 +629,9 @@
       min-width: 1000px;
     }
   }
-  .lg\:min-w-\[1000x\] {
-    @media (width >= 64rem) {
-      min-width: 1000x;
-    }
-  }
-  .lg\:min-w-\[1024px\] {
-    @media (width >= 64rem) {
-      min-width: 1024px;
-    }
-  }
-  .lg\:min-w-\[10200px\] {
-    @media (width >= 64rem) {
-      min-width: 10200px;
-    }
-  }
-  .lg\:md\:min-w-\[764px\] {
-    @media (width >= 64rem) {
-      @media (width >= 48rem) {
-        min-width: 764px;
-      }
-    }
-  }
-  .lg\:md\:min-w-\[1024px\] {
-    @media (width >= 64rem) {
-      @media (width >= 48rem) {
-        min-width: 1024px;
-      }
-    }
-  }
-  .xl\:min-w-\[1024px\] {
-    @media (width >= 80rem) {
-      min-width: 1024px;
-    }
-  }
   .xl\:min-w-\[1280px\] {
     @media (width >= 80rem) {
       min-width: 1280px;
-    }
-  }
-  .xl\:md\:min-w-\[1024px\] {
-    @media (width >= 80rem) {
-      @media (width >= 48rem) {
-        min-width: 1024px;
-      }
     }
   }
 }
