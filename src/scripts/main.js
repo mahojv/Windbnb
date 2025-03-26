@@ -31,6 +31,7 @@ const placeSugestions = document.querySelector("#placeSugestions")
 const guestCounter = document.querySelector("#guestCounter")
 const itemsCardCounter = document.querySelector("#itemsCardCounter")
 const sugerenciasBox = document.querySelector("#sugerenciasBox")
+const locationPlaceBox = document.querySelector("#locationPlaceBox")
 
 // Variables Globales
 let contadorA = 0
@@ -154,31 +155,33 @@ locationInputSearch.addEventListener('input', function(event){
 
 
     if(nuevaLista.length > 0){
-
-        if(arrayInput.length = 1 ){
+        
+        console.log(typeof(arrayInput.length))
 
         loadStays(nuevaLista, cardsContainer, itemsCardCounter);
+
+        if(arrayInput.length === 1 ){
+        
         locationSearch.textContent = `${contentInputSearch}, Finland` 
         guestSearch.textContent = `${contadorTotal} guests`
 
+        }else if(arrayInput.length === 2 ){
 
-        }else{
-
-            loadStays(nuevaLista, cardsContainer, itemsCardCounter);
-            locationSearch.textContent = `${contentInputSearch}` 
+            locationSearch.textContent = contentInputSearch 
             guestSearch.textContent = `${contadorTotal} guests`
-    
     
             }
 
         
-
+            
         
 
     }
 
     
-
+    locationPlaceBox.innerHTML = `
+        <h1 id="locationPlaceBox" class="text-2xl font-bold">Stays in ${contentInputSearch}</h1>
+        `
     
 })
 
@@ -199,7 +202,9 @@ guestInputSearch.addEventListener('input', function(event){
         loadStays(nuevaLista, cardsContainer, itemsCardCounter);
 
       
-
+        locationPlaceBox.innerHTML = `
+        <h1 id="locationPlaceBox" class="text-2xl font-bold">Stays in ${contentInputSearch}</h1>
+        `
             locationSearch.textContent = contentInputSearch
             guestSearch.textContent = `${contadorTotal} guests`
     }
@@ -211,6 +216,21 @@ guestInputSearch.addEventListener('input', function(event){
 searchStay.addEventListener('click', function (x){
 
 
+    if(arrayInput.length === 1 ){
+        
+        locationSearch.textContent = `${contentInputSearch}, Finland` 
+        guestSearch.textContent = `${contadorTotal} guests`
+
+        
+
+        }else if(arrayInput.length === 2 ){
+
+            locationSearch.textContent = contentInputSearch 
+            guestSearch.textContent = `${contadorTotal} guests`
+    
+            }
+
+
     
 
     nuevaLista = filterSearch(arrayInput ,contadorTotal, stays)
@@ -219,9 +239,17 @@ searchStay.addEventListener('click', function (x){
     if(nuevaLista.length > 0){
 
         loadStays(nuevaLista, cardsContainer, itemsCardCounter);
+
+        locationPlaceBox.innerHTML = `
+        <h1 id="locationPlaceBox" class="text-2xl font-bold">Stays in ${contentInputSearch}</h1>
+        `
+        
     }else{
         console.log("cero destinos")
         cardsContainer.innerHTML = ""
+        locationPlaceBox.innerHTML = `
+        <h1 id="locationPlaceBox" class="text-2xl font-bold">Sin resultados</h1>
+        `
         itemsCardCounter.innerHTML = `<p id="itemsCardCounter" class="font-semibold">0 stays</p>`
     }
 
@@ -229,17 +257,7 @@ searchStay.addEventListener('click', function (x){
     toggleSearch.classList.add("hidden");
     
 
-    if(arrayInput.length = 1 ){
-
-        locationSearch.textContent = `${contentInputSearch}, Finland` 
-        guestSearch.textContent = `${contadorTotal} guests`
-
-
-        }else{
-
-            locationSearch.textContent = `${contentInputSearch}` 
-            guestSearch.textContent = `${contadorTotal} guests`
-            }
+    
 
 
 
@@ -247,7 +265,17 @@ searchStay.addEventListener('click', function (x){
 
 searchStay2.addEventListener('click', function (x){
 
-   
+    if(arrayInput.length === 1 ){
+        
+        locationSearch.textContent = `${contentInputSearch}, Finland` 
+        guestSearch.textContent = `${contadorTotal} guests`
+
+        }else if(arrayInput.length === 2 ){
+
+            locationSearch.textContent = contentInputSearch 
+            guestSearch.textContent = `${contadorTotal} guests`
+    
+            }
     
 
     nuevaLista = filterSearch(arrayInput ,contadorTotal, stays)
@@ -256,26 +284,34 @@ searchStay2.addEventListener('click', function (x){
     if(nuevaLista.length > 0){
 
         loadStays(nuevaLista, cardsContainer, itemsCardCounter);
+
+        locationPlaceBox.innerHTML = `
+        <h1 id="locationPlaceBox" class="text-2xl font-bold">Stays in ${contentInputSearch}</h1>
+        `
+
     }else{
         console.log("cero destinos")
 
         cardsContainer.innerHTML = ""
+        locationPlaceBox.innerHTML = `
+        <h1 id="locationPlaceBox" class="text-2xl font-bold">Sin resultados</h1>
+        `
         itemsCardCounter.innerHTML = `<p id="itemsCardCounter" class="font-semibold">0 stays</p>`
     }
 
     toggleSearch.classList.add("hidden");
 
-    if(arrayInput.length = 1 ){
+    // if(arrayInput.length = 1 ){
 
-        locationSearch.textContent = `${contentInputSearch}, Finland` 
-        guestSearch.textContent = `${contadorTotal} guests`
+    //     locationSearch.textContent = `${contentInputSearch}, Finland` 
+    //     guestSearch.textContent = `${contadorTotal} guests`
 
 
-        }else{
+    //     }else{
 
-            locationSearch.textContent = `${contentInputSearch}` 
-            guestSearch.textContent = `${contadorTotal} guests`
-            }
+    //         locationSearch.textContent = `${contentInputSearch}` 
+    //         guestSearch.textContent = `${contadorTotal} guests`
+    //         }
 
 
 

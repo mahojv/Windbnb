@@ -43,3 +43,14 @@ Este comando se encargará de compilar los estilos cada vez que uses clases de T
 Ya tienes todo listo para empezar. Explora los archivos, experimenta con el código y diviértete aprendiendo. 🎉
 
 Si tienes dudas, no dudes en preguntar. ¡Éxito en tu proyecto! 💪
+
+## 6. Funcionalidades adicionales
+
+
+- Se anexa funcionalidad para busqueda en filtro por pais, separado por "coma" ( funcional ✅ )
+
+- se anexa modificacion de titulo "stays in finland" dependiendo de lo ingresado en el buscador ( funcional ✅ )
+
+- se brinda la posibilidad de filtrar unicamente agregando cantidad de huespedes
+
+

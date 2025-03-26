@@ -6,8 +6,14 @@ export function loadStays (array, box, itemsBox){
 box.innerHTML = ""
 itemsBox.innerHTML = ""
 
+
 let items = array.length
 let itemsTemplate = ""
+
+
+let locationTemplate = `
+<h1 id="locationPlaceBox" class="text-2xl font-bold">Stays in finland</h1>
+`
 
 if(items > 12){
 
@@ -49,7 +55,7 @@ array.forEach(item => {
     const template = `
 
             <div role="card" class="flex gap-1 flex-col max-w-[600px] max-h-[460px] sm:max-w-[283px] md:max-w-[380px]">
-                <figure class="rounded-xl overflow-hidden max-h-[252px] w-full ">
+                <figure class="rounded-xl overflow-hidden max-h-[252px] sm:max-w-[283px] ">
                     <img class="object-cover aspect-video" src=${item.photo}
                         alt="">
                 </figure>
@@ -76,6 +82,7 @@ array.forEach(item => {
 
          box.innerHTML += template
          itemsBox.innerHTML = itemsTemplate
+
 
 });
 
@@ -124,7 +131,7 @@ export function filterSearch(contentInputSearch, guestSearch , arrayStay) {
             }
 
 
-        }else {
+        }else if(contentInputSearch.length === 1) {
             if(contentInputSearch[0].toLowerCase().includes(search.city.toLowerCase()) && search.maxGuests >= guestSearch ){
 
                 return search
@@ -132,7 +139,13 @@ export function filterSearch(contentInputSearch, guestSearch , arrayStay) {
     
             }
 
-        }
+        } else if(contentInputSearch.length === 2) {
+            if(contentInputSearch[0].toLowerCase().includes(search.city.toLowerCase()) && contentInputSearch[1].toLowerCase().includes(search.country.toLowerCase()) && search.maxGuests >= guestSearch ){
+
+                return search
+                
+    
+            }
         
 
 
@@ -144,6 +157,7 @@ export function filterSearch(contentInputSearch, guestSearch , arrayStay) {
     
 
     }
+}
     
 
 )
