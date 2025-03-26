@@ -51,6 +51,6 @@ Si tienes dudas, no dudes en preguntar. ¡Éxito en tu proyecto! 💪
 
 - se anexa modificacion de titulo "stays in finland" dependiendo de lo ingresado en el buscador ( funcional ✅ )
 
-- se brinda la posibilidad de filtrar unicamente agregando cantidad de huespedes
+- se brinda la posibilidad de filtrar unicamente agregando cantidad de huespedes ( funcional ✅ )
 
 
