@@ -179,5 +179,37 @@ export const stays = [
         "beds": 3,
         "photo": "https://assets.hyatt.com/content/dam/hyatt/hyattdam/images/2021/01/07/1717/Hyatt-Regency-Mexico-City-P793-View-King-Guestroom.jpg/Hyatt-Regency-Mexico-City-P793-View-King-Guestroom.4x3.jpg"
     },
-  
+    {
+        "city": "Oaxaca",
+        "country": "Mexico",
+        "superHost": true,
+        "title": "Nice 2 room apartment close to everything. Oaxaca, Mexico",
+        "rating": 4.90,
+        "maxGuests": 7,
+        "type": "Entire apartment",
+        "beds": 3,
+        "photo": "https://images.homify.com/v1502133741/p/photo/image/2166662/SombrasdelViento_25.jpg"
+    },
+    {
+        "city": "Vaasa",
+        "country": "Mexico",
+        "superHost": true,
+        "title": "Nice 2 room apartment close to everything. Vaasa, Mexico",
+        "rating": 4.90,
+        "maxGuests": 7,
+        "type": "Entire apartment",
+        "beds": 3,
+        "photo": "https://images.homify.com/v1502133741/p/photo/image/2166662/SombrasdelViento_25.jpg"
+    },
+    {
+        "city": "Helsinki",
+        "country": "Mexico",
+        "superHost": false,
+        "title": "Beautiful and comfortable old wooden house. Helsinki, Mexico",
+        "rating": 4.63,
+        "maxGuests": 10,
+        "type": "Entire house",
+        "beds": null,
+        "photo": "https://images.unsplash.com/photo-1516455590571-18256e5bb9ff?ixlib=rb-1.2.1&auto=format&fit=crop&w=2250&q=80"
+    }
 ]
