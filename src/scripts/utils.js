@@ -175,23 +175,23 @@ export function listaPrincipal(array) {
  */
 export function suggestionDeploy(array, suggestionBox) {
   const reduccion = array.reduce(function (acum, item) {
-    const [ciudad, pais] = item;
+    const [ciudad, pais] = item
 
     let existe = acum.some(function (x) {
-      const ciudadAcum = x[0];
-      const paisAcum = x[1];
+      const ciudadAcum = x[0]
+      const paisAcum = x[1]
 
-      return ciudadAcum === ciudad && paisAcum === pais;
+      return ciudadAcum === ciudad && paisAcum === pais
     });
 
     if (!existe) {
-      acum.push(item);
+      acum.push(item)
     }
 
-    return acum;
-  }, []);
+    return acum
+  }, [])
 
-  suggestionBox.innerHTML = ``;
+  suggestionBox.innerHTML = ``
 
   reduccion.forEach(function (x) {
     const template = `    
@@ -199,8 +199,8 @@ export function suggestionDeploy(array, suggestionBox) {
                     <img class="size-5 " src="./src/images/icons/pin.svg" alt="">
                     <p class="text-grisRanking">${x[0]}, ${x[1]}</p>
                 </span>
-                `;
+                `
 
-    suggestionBox.innerHTML += template;
+    suggestionBox.innerHTML += template
   });
 }
