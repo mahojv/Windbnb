@@ -55,6 +55,8 @@ Si tienes dudas, no dudes en preguntar. ¡Éxito en tu proyecto! 💪
 
 - se agrego 1 apartamento mas se carga automaticamente en el filtro de busqueda sugerida y estn disponible para filtrado ( funcional ✅ )
 
+- filtrado de ubicacion mientras se esta tipeando usando 'input' ( funcional ✅ )
+
 
 
 
