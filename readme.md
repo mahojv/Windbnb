@@ -53,6 +53,8 @@ Si tienes dudas, no dudes en preguntar. ¡Éxito en tu proyecto! 💪
 
 - se brinda la posibilidad de filtrar unicamente agregando cantidad de huespedes ( funcional ✅ )
 
+- se agrego 1 apartamento mas se carga automaticamente en el filtro de busqueda sugerida y estn disponible para filtrado ( funcional ✅ )
+
 
 
 

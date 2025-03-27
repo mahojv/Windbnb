@@ -40,13 +40,13 @@ export function loadStays(array, box, itemsBox) {
 
     const template = `
 
-            <div role="card" class="flex gap-1 flex-col max-w-[600px] max-h-[460px] sm:max-w-[283px] md:max-w-[380px]">
-                <figure class="rounded-xl overflow-hidden max-h-[252px] sm:max-w-[283px] ">
+            <div role="card" class="flex gap-1 flex-col items-center max-w-[600px] max-h-[460px] sm:max-w-[283px] md:max-w-[380px]">
+                <figure class="rounded-xl overflow-hidden max-h-[252px] sm:w-full ">
                     <img class="object-cover aspect-video" src=${item.photo}
                         alt="">
                 </figure>
-                <span class="flex justify-between ">
-                    <span class=" flex items-center  gap-3 ">
+                <span class="flex justify-between w-full">
+                    <span class=" w-full flex items-center  gap-3 ">
                         ${superHostItem}
                         <p class="text-grisTexto text-[14px]">${item.type}. ${bedsItem} </p>
                     </span>
@@ -61,7 +61,7 @@ export function loadStays(array, box, itemsBox) {
                         <p class="text-grisRanking text-[15px]">${item.rating}</p>
                     </span>
                 </span>
-                <p>${item.title} </p>
+                <p class="w-full">${item.title} </p>
 
 
             </div> `;

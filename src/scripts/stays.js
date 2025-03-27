@@ -167,5 +167,17 @@ export const stays = [
         "type": "Entire apartment",
         "beds": 3,
         "photo": "https://images.unsplash.com/photo-1523755231516-e43fd2e8dca5?ixlib=rb-1.2.1&auto=format&fit=crop&w=1275&q=80"
-    }
+    },
+    {
+        "city": "CDMX",
+        "country": "Mexico",
+        "superHost": true,
+        "title": "Nice 2 room apartment close to everything. CDMX, Mexico",
+        "rating": 4.90,
+        "maxGuests": 7,
+        "type": "Entire apartment",
+        "beds": 3,
+        "photo": "https://assets.hyatt.com/content/dam/hyatt/hyattdam/images/2021/01/07/1717/Hyatt-Regency-Mexico-City-P793-View-King-Guestroom.jpg/Hyatt-Regency-Mexico-City-P793-View-King-Guestroom.4x3.jpg"
+    },
+  
 ]
